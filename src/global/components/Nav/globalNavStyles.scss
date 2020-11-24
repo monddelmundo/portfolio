@@ -1,0 +1,109 @@
+@import "../../../globalVariables.scss";
+
+.nav-container {
+  display: flex;
+  padding: 2em 3em;
+  justify-content: space-between;
+  align-items: center;
+  background: #43cea2; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #185a9d,
+    #43cea2
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #185a9d,
+    #43cea2
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.left-side {
+  width: 40%;
+  justify-content: flex-start;
+  color: $global-secondary-color;
+}
+
+.right-side {
+  display: flex;
+  width: 60%;
+  justify-content: space-around;
+}
+
+.text-title {
+  text-transform: uppercase;
+  font-size: 23px;
+  font-weight: semi-bold;
+}
+
+.text-subtitle {
+  font-size: 20px;
+  font-weight: 1;
+}
+
+.nav-link {
+  color: $global-secondary-color;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  &-active {
+    @extend .nav-link;
+    color: #d7ccff;
+  }
+}
+
+.nav-btn-icon {
+  display: none !important;
+}
+
+.nav-drawer {
+  display: none !important;
+}
+
+//tablet specific styles
+@media (max-width: 64em) {
+  .nav-container {
+    padding: 1em 1.5em;
+  }
+  .text-title {
+    font-size: 18px;
+  }
+  .text-subtitle {
+    font-size: 15px;
+  }
+  .nav-link {
+    font-size: 15px;
+  }
+}
+
+//mobile specific styles
+@media (max-width: 40em) {
+  //   .nav-container {
+  //     padding: 1em 0.5em;
+  //   }
+  .right-side {
+    display: none;
+  }
+  .right-side-mobile {
+    display: block;
+    width: 40%;
+    // flex-grow: 1;
+  }
+  .left-side {
+    width: 60%;
+  }
+  .text-title {
+    font-size: 18px;
+  }
+  .text-subtitle {
+    font-size: 15px;
+  }
+  .nav-btn-icon.nav-btn-icon {
+    display: block !important;
+    margin-left: 120px;
+    color: $global-secondary-color;
+  }
+  .nav-drawer {
+    display: block !important;
+  }
+}

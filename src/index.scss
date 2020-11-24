@@ -1,0 +1,25 @@
+//import section
+@import "./global/components/Nav/globalNavStyles.scss";
+
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans"),
+    url("./fonts/OpenSans-Regular.ttf") format("truetype");
+}
+
+@import "./globalVariables.scss";
+
+//global selector for elements/classes
+
+//elements
+body {
+  font-family: $global-font-family;
+  margin: 0;
+}
+
+p {
+  line-height: $global-line-spacing;
+  color: $global-text-color;
+}
+
+//classes
