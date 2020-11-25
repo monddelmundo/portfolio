@@ -14,7 +14,6 @@ const useStyles = makeStyles(() =>
     },
     primary: {
       color: "white",
-      fontSize: 15,
     },
   })
 );
@@ -54,7 +53,7 @@ const Nav = (props: any) => {
           aria-label="menu"
           onClick={toggleDrawer(true)}
         >
-          <MenuIcon />
+          <MenuIcon fontSize="large" />
         </IconButton>
         <Drawer
           className="nav-drawer"
@@ -86,6 +85,7 @@ const Nav = (props: any) => {
           <NavLink
             activeClassName="nav-link-active"
             className="nav-link"
+            key={index}
             exact={index === 0 ? true : false}
             to={route.path}
           >

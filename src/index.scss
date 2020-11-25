@@ -1,5 +1,6 @@
 //import section
 @import "./global/components/Nav/globalNavStyles.scss";
+@import "./resources/Pages/Home/globalHomeStyles.scss";
 
 @font-face {
   font-family: "Open Sans";
@@ -15,11 +16,13 @@
 body {
   font-family: $global-font-family;
   margin: 0;
+  height: auto;
 }
 
 p {
   line-height: $global-line-spacing;
   color: $global-text-color;
+  text-align: justify;
 }
 
 //classes
