@@ -6,12 +6,12 @@ const Home = () => {
         <img
           alt=""
           className="image-css-html"
-          src="./assets/images/css-html.png"
+          src="./assets/images/css-html.webp"
         />
         <img
           alt=""
           className="image-css-html"
-          src="./assets/images/css-html.png"
+          src="./assets/images/css-html.webp"
         />
       </div>
       <div className="text-two-column">
