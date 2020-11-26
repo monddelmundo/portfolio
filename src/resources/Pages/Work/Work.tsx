@@ -8,4 +8,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default React.memo(Work);
