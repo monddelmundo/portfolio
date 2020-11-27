@@ -8,6 +8,15 @@ const Contact = () => {
     message: "",
   });
 
+  const setInitialState = () => {
+    setForm((prevState) => ({
+      ...prevState,
+      name: "",
+      emailAddress: "",
+      message: "",
+    }));
+  };
+
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
@@ -35,6 +44,7 @@ const Contact = () => {
     const data = await res.json();
 
     if (data.statusCode === 200) {
+      setInitialState();
       alert("Message sent successfully!");
     } else {
       alert("Message sending failed!");
