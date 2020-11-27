@@ -31,7 +31,7 @@ const ContactForm = ({ form, onChange, handleSubmit }: IContactFormProps) => {
       >
         <h1 className="text-contact">Contact</h1>
         <TextField
-          //   required
+          required
           id="outlined-required"
           label="Full Name"
           name="user-name"
@@ -42,7 +42,7 @@ const ContactForm = ({ form, onChange, handleSubmit }: IContactFormProps) => {
           onChange={onChange}
         />
         <TextField
-          //   required
+          required
           id="outlined-required"
           label="Email Address"
           name="user-email"
@@ -53,7 +53,7 @@ const ContactForm = ({ form, onChange, handleSubmit }: IContactFormProps) => {
           onChange={onChange}
         />
         <TextField
-          //   required
+          required
           id="outlined-multiline-static"
           label="Message"
           name="user-message"
