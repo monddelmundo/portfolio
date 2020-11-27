@@ -1,0 +1,19 @@
+@import "../../../globalVariables.scss";
+
+.contact-container {
+  margin: 2em 0 0 0;
+  padding: 0;
+}
+
+.contact-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-contact {
+  display: inline-block;
+  color: $global-primary-color;
+  text-transform: uppercase;
+}
