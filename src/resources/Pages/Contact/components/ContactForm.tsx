@@ -9,16 +9,16 @@ import { IContactFormProps } from "../contactInterface";
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     button: {
-      width: "50%",
+      width: "40%",
       [theme.breakpoints.down("sm")]: {
-        width: "80%",
+        width: "70%",
       },
     },
     textField: {
       marginBottom: theme.spacing(4),
-      width: "50%",
+      width: "40%",
       [theme.breakpoints.down("sm")]: {
-        width: "80%",
+        width: "70%",
       },
     },
   })
