@@ -1,0 +1,143 @@
+@import "../../../globalVariables.scss";
+
+.work-container {
+  padding: 0;
+  margin: 2em 0 0 0;
+  margin-bottom: 5em;
+}
+
+.work-two-column {
+  display: flex;
+  flex-direction: row;
+  margin-left: 3em;
+  margin-right: 3em;
+}
+
+.work-column-left {
+  margin: 0;
+  width: 50%;
+  margin-right: 5em;
+}
+
+.work-column-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 1em;
+  width: 50%;
+}
+
+.work-column-right-img {
+  width: 100%;
+}
+
+.work-prof-pic {
+  width: 50%;
+  height: auto;
+  margin-bottom: 2em;
+}
+
+.page-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1em;
+  color: $global-primary-color;
+  @extend .text-large;
+}
+
+.text-work-highlight {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  color: $global-primary-color;
+  @extend .text-medium;
+}
+
+.text-work-details {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  color: $global-primary-color;
+  font-weight: semi-bold;
+  @extend .text-small;
+}
+
+.work-description {
+  width: 80%;
+}
+
+.work-column-right-icons {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+
+.span-links-logo {
+  display: block;
+  width: 3.5em;
+  height: 3em;
+  padding: 0;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 64em) {
+  .work-two-column {
+    display: flex;
+    justify-content: center;
+    flex-flow: column-reverse;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+  }
+
+  .work-column-left {
+    width: 100%;
+  }
+
+  .work-column-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .work-column-right-img {
+    width: 40%;
+    margin-right: 2em;
+  }
+
+  .work-column-right-icons {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    justify-content: space-around;
+    margin-bottom: 2em;
+  }
+
+  .span-links-logo {
+    width: 3.5em;
+  }
+
+  .work-prof-pic {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 40em) {
+  .work-column-right-icons {
+    display: flex;
+    align-content: flex-start;
+  }
+
+  .span-links-logo {
+    width: 1.5em;
+  }
+
+  .work-description {
+    width: 100%;
+  }
+}

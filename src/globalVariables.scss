@@ -10,3 +10,27 @@ $global-text-lg: 23px;
 $global-text-sm-mobile: 15px;
 $global-text-md-mobile: 17px;
 $global-text-lg-mobile: 20px;
+
+.text-small {
+  font-size: $global-text-sm;
+}
+
+.text-medium {
+  font-size: $global-text-md;
+}
+
+.text-large {
+  font-size: $global-text-lg;
+}
+
+@media (max-width: 64em) {
+  .text-small {
+    font-size: $global-text-sm-mobile;
+  }
+  .text-medium {
+    font-size: $global-text-md-mobile;
+  }
+  .text-large {
+    font-size: $global-text-lg-mobile;
+  }
+}

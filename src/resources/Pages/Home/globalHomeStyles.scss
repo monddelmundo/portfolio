@@ -6,31 +6,10 @@
   padding: 0;
 }
 
-.text-small {
-  font-size: $global-text-sm;
-}
-
-.text-medium {
-  font-size: $global-text-md;
-}
-
-.text-large {
-  font-size: $global-text-lg;
-}
-
 .image-css-html {
   width: 50%;
   height: auto;
   filter: brightness(150%);
-}
-
-.text-highlight {
-  display: inline-block;
-  color: $global-primary-color;
-  @extend .text-medium;
-  margin: 0;
-  //   padding: 0 2em 0 0;
-  //   margin: 2em 2em 0 0;
 }
 
 .span-highlight-logo {
@@ -41,6 +20,13 @@
   margin-top: 2em;
   margin-right: 1em;
   filter: invert(0.5) sepia(1) saturate(70) hue-rotate(175deg);
+}
+
+.text-highlight {
+  display: inline-block;
+  color: $global-primary-color;
+  @extend .text-medium;
+  margin: 0;
 }
 
 .text-two-column {
@@ -63,13 +49,6 @@
 
 //tablet specific styles
 @media (max-width: 64em) {
-  .text-small {
-    font-size: $global-text-sm-mobile;
-  }
-  .text-medium {
-    font-size: $global-text-md-mobile;
-  }
-
   .span-highlight-logo {
     width: 1.4em;
     height: 1em;

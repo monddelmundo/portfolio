@@ -1,6 +1,7 @@
 //import section
 @import "./global/components/Nav/globalNavStyles.scss";
 @import "./resources/Pages/Home/globalHomeStyles.scss";
+@import "./resources/Pages/Work/globalWorkStyles.scss";
 @import "./resources/Pages/Contact/globalContactStyles.scss";
 
 @font-face {
@@ -21,7 +22,8 @@ body {
   height: auto;
 }
 
-p {
+p,
+li {
   line-height: $global-line-spacing;
   color: $global-text-color;
   text-align: justify;
