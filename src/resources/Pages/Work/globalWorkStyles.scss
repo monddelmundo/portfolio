@@ -74,6 +74,10 @@
   margin-bottom: 2em;
 }
 
+.span-link {
+  width: 3.5em;
+}
+
 .span-links-logo {
   display: block;
   width: 3.5em;
@@ -130,6 +134,10 @@
   .work-column-right-icons {
     display: flex;
     align-content: flex-start;
+  }
+
+  .span-link {
+    width: 1.5em;
   }
 
   .span-links-logo {

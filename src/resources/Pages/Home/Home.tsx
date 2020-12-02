@@ -6,18 +6,18 @@ const Home = () => {
         <img
           alt=""
           className="image-css-html"
-          src="./assets/images/css-html.webp"
+          src="/assets/images/css-html.webp"
         />
         <img
           alt=""
           className="image-css-html"
-          src="./assets/images/css-html.webp"
+          src="/assets/images/css-html.webp"
         />
       </div>
       <div className="text-two-column">
         <div className="text-column-left">
           <span className="span-highlight-logo">
-            <img alt="" src="./assets/logos/brush-outline.svg" />
+            <img alt="" src="/assets/logos/brush-outline.svg" />
           </span>
           <h4 className="text-highlight">Frontend Development</h4>
           <p>
@@ -29,7 +29,7 @@ const Home = () => {
         </div>
         <div className="text-column-right">
           <span className="span-highlight-logo">
-            <img alt="" src="./assets/logos/code-slash-outline.svg" />
+            <img alt="" src="/assets/logos/code-slash-outline.svg" />
           </span>
           <h4 className="text-highlight">Backend Development</h4>
           <p>

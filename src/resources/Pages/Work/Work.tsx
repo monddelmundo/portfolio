@@ -1,80 +1,75 @@
-import React from "react";
+import React, { useMemo } from "react";
+import LinkLogo from "./components/LinkLogo";
+import WorkExperience from "./components/WorkExperience";
 
 const Work = () => {
+  const workExperiences = () => [
+    {
+      title: "Senior Software Engineer",
+      details: "SPI Global Parañaque, Philippines - 2017 - Current",
+      descriptions: [
+        "Develops and maintains websites.",
+        "Optimizes codes to reduce slowness of the page.",
+        "Improves security of the clients' website.",
+        "Produces documents or guidelines for different processes that could serve as SOP to the members of the team.",
+        "Monitors workload of other team members to ensure client’s satisfaction.",
+      ],
+    },
+    {
+      title: "Software Engineer",
+      details: "SPI Global Parañaque, Philippines - 2015 - 2017",
+      descriptions: [
+        "Developed and maintained websites.",
+        "Provided code reviews in our team.",
+      ],
+    },
+  ];
+
+  const linkLogos = () => [
+    {
+      href: "https://github.com/monddelmundo",
+      src: "/assets/logos/logo-github.svg",
+    },
+    {
+      href: "https://www.linkedin.com/in/monddelmundo/",
+      src: "/assets/logos/logo-linkedin.svg",
+    },
+    {
+      href: "https://www.facebook.com/0.mond.8/",
+      src: "/assets/logos/logo-facebook.svg",
+    },
+    {
+      href: "mailto:edmond.delmundo@gmail.com",
+      src: "/assets/logos/mail-open-outline.svg",
+    },
+  ];
+
+  const memoizedWorkExperiences = useMemo(() => workExperiences(), []);
+  const memoizedLinkLogos = useMemo(() => linkLogos(), []);
+
   return (
     <div className="work-container">
       <div className="work-two-column">
         <div className="work-column-left">
           <h2 className="page-title">Work Experiences</h2>
-          <div className="work-experience">
-            <h4 className="text-work-highlight">Senior Software Engineer</h4>
-            <h4 className="text-work-details">
-              SPI Global Parañaque, Philippines - 2017 - Current
-            </h4>
-            <ul>
-              <li className="work-description">
-                Develops and maintains websites.
-              </li>
-              <li className="work-description">
-                Optimizes codes to reduce slowness of the page.
-              </li>
-              <li className="work-description">
-                Improves security of the clients' website.
-              </li>
-              <li className="work-description">
-                Produces documents or guidelines for different processes that
-                could serve as SOP to the members of the team.
-              </li>
-              <li className="work-description">
-                Monitors workload of other team members to ensure client’s
-                satisfaction.
-              </li>
-            </ul>
-          </div>
-          <div className="work-experience">
-            <h4 className="text-work-highlight">Software Engineer</h4>
-            <h4 className="text-work-details">
-              SPI Global Parañaque, Philippines - 2015 - 2017
-            </h4>
-            <ul>
-              <li className="work-description">
-                Developed and maintained websites.
-              </li>
-              <li className="work-description">
-                Provided code reviews in our team.
-              </li>
-            </ul>
-          </div>
+          {memoizedWorkExperiences &&
+            memoizedWorkExperiences.map((workExperience, index) => (
+              <WorkExperience key={index} experience={workExperience} />
+            ))}
         </div>
         <div className="work-column-right">
           <div className="work-column-right-img">
             <img
               className="work-prof-pic"
-              src="./assets/images/profPic-min.webp"
+              src="/assets/images/profPic-min.webp"
               alt=""
             />
           </div>
           <div className="work-column-right-icons">
-            <a href="https://github.com/monddelmundo">
-              <span className="span-links-logo">
-                <img alt="" src="./assets/logos/logo-github.svg" />
-              </span>
-            </a>
-            <a href="https://www.linkedin.com/in/monddelmundo/">
-              <span className="span-links-logo">
-                <img alt="" src="./assets/logos/logo-linkedin.svg" />
-              </span>
-            </a>
-            <a href="https://www.facebook.com/0.mond.8/">
-              <span className="span-links-logo">
-                <img alt="" src="./assets/logos/logo-facebook.svg" />
-              </span>
-            </a>
-            <a href="mailto:edmond.delmundo@gmail.com">
-              <span className="span-links-logo">
-                <img alt="" src="./assets/logos/mail-open-outline.svg" />
-              </span>
-            </a>
+            {memoizedLinkLogos &&
+              memoizedLinkLogos.map((linkLogo, index) => (
+                <LinkLogo key={index} href={linkLogo.href} src={linkLogo.src} />
+              ))}
           </div>
         </div>
       </div>
